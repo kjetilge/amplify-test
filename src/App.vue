@@ -4,10 +4,29 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <a href="">About</a>
     <router-view/>
   </div>
 </template>
 
+<script>
+/*
+created () {
+console.log('route', this.$route.path)
+this.$router.replace(this.$route.query.redirect || '/')
+}
+this.$router.replace(this.$route.fullPath || '/')
+*/
+export default {
+  name: 'App',
+  created () {
+    // console.log('route', this.$route.path)
+    // this.$router.replace(this.$route.query.redirect || '/')
+    console.log('route', this.$route.fullPath)
+    this.$router.replace(this.$route.fullPath || '/')
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
